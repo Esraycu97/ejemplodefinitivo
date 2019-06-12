@@ -11,7 +11,7 @@
     <h:body>
             <div class="ui-g">
                 <div class="ui-g-12 ui-md-12 ui-lg-12" style="padding:0!important;position:relative;">
-                    <ui:composition template="./resources/templates/template.xhtml">
+                    <ui:composition template="./resources/templates/template_root.xhtml">
                         <ui:define name="top">
                             <div style="
                             display: inline-block;
@@ -25,7 +25,7 @@
                             vertical-align: middle;
                             margin-left: -295px;
                            ">
-                                <p:outputLabel value="Heladeria F.I. U.N.Ju"/>
+                                <h1>Heladeria F.I. U.N.Ju</h1>
                             </div>
                         </ui:define>
                         <ui:define name="menu">
@@ -65,10 +65,7 @@
                                    </f:facet>
                                </p:megaMenu>
                            </div>
-                        </ui:define>
-                        <ui:define name="admin">
-                            MENU DE ADMIn
-                        </ui:define>                       
+                        </ui:define>        
                         
                         <ui:define name="content">
                             <!--Esto seria para ver la imagen conrriendoce-->
@@ -91,18 +88,19 @@
                                 </p:imageSwitch>
                             </div>
                         </ui:define>
-                        
+                        <ui:define name="root">
+                            <p:megaMenu style="margin-top:25px">
+                                <p:submenu label="AGREGAR ADMIN" />
+                                <p:submenu label="ELIMINAR ADMIN" />
+                                <p:submenu label="QUITAR HELADO" />
+                                
+                            <p:menuitem value="Quit" url="http://www.primefaces.org" icon="pi pi-times" />
+                            </p:megaMenu>
+                        </ui:define>
 
-
-
-
-            <div style="margin: 0; margin-top: 500px; background-color: #000; height: 200px;">
-                <h:outputText value="Telefono: +5438813113" style="color: antiquewhite;"/>
-            </div>
                     </ui:composition>
                 </div>
             </div>
-            <!--AQUI Va EL MENU DE CONTROL --> 
     </h:body>
 
 
